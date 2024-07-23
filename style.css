@@ -1,0 +1,381 @@
+html, body {
+  height: 100%;
+  width: 100%;
+/*   overflow-x: hidden; */
+}
+/* bottom nav */
+
+.nav{
+   height: 50px; 
+   width: 100vw;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   background-color: black;
+ display: flex!important;
+ align-items: center;
+ box-shadow: 0 0 10px rgba(109, 99, 99, 0.2);
+ z-index: 10000;
+ justify-content: space-around;
+}
+.nav__link{
+    color: #cfbaba;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.nav__link:hover{
+  color: white;
+}
+.nav--hidden{
+    transform: translateY(-50px);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* navbar */
+.percentage-icon{
+    color: white!important;
+    position: relative;
+    left: 22px;
+    top: -5px;
+}
+.navbar{
+    padding-bottom: 100px !important;
+}
+#background-banner{
+    background: url(/hs-image/sanitization.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+.heading{
+    text-shadow: 2px 3px 4px white;
+  font-size: 40px!important;
+}
+.offcanvas{
+    height: 100vh!important;
+    z-index: 1000!important;
+}
+.search:focus{
+    box-shadow: none!important;
+    
+    border: 1px solid black !important;
+}
+.form-select:focus{
+    box-shadow: 2px 2px 5px gray!important;
+}
+#content, #content2 , #content3 , #content4{
+    transition: 0.5s ease-in;
+    animation: box 0.5s ease-in ;
+}
+/* 12 service-box */
+.service-image img{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+.service-image{
+    box-shadow: 1px 1px 30px gray;
+    /* position: relative; */
+    /* bottom: 50px; */
+    background-color: white;
+  
+}
+.service-box{
+    padding: 10px;
+}
+.service-box a{
+ color: black;
+ text-decoration: none;
+ font-weight: 500;
+ font-family: sans-serif;
+  font-size: 2%!important;
+}
+.list{
+    position: relative;
+    top: 0;
+    right: 200%;
+   
+}
+.list.active{
+    right: 0%;
+   
+}
+
+/* gromming */
+#gromming{
+    background: url(/hs-image/living-room.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    margin-top: 100px;
+}
+.logo-container{
+    background-color: black;
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-container p{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+.logo-container img{
+    height: 200px;
+    width: 200px;
+}
+.gromming-container{
+    border-radius: 0px 15px 15px 0px;
+}
+.btn-color:hover{
+    background-color: black!important;
+    color: white!important;
+    transition: 0.5s;
+}
+.btn-color2{
+    background-color: black!important;
+    color: white!important;
+}
+.btn-color{
+    color: rgb(62, 136, 136)!important;
+    font-weight: bold!important;
+}
+.service-box2{
+    border: 1px solid gainsboro;
+    padding: 15px;
+   font-family:sans-serif;
+   font-weight: 500;
+}
+.service-box2 a{
+    color:black;
+    text-decoration: none;
+}
+.service-box2 img{
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+#serviceboxwomen{
+    transition: 0.5s ease-in;
+animation: box 0.5s ease-in ;
+}
+@keyframes box {
+    0%{
+     opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#serviceboxmen{
+    transition: 0.5s ease-in;
+    animation: box 0.5s ease-in ;
+}
+
+
+/* offer */
+#offer{
+    margin-top: 70px;
+}
+/* big service */
+#big-services{
+margin-top: 100px;
+}
+.big-service-box img{
+  height: 200px;
+ width: 100%;
+}
+.icon img{
+width: 100px;
+height: 100px;
+}
+/* experience */
+#experience{
+    margin: 70px 0;
+}
+/* footer */
+#footer{
+    background-color: black;
+    padding:10px;
+    color: white;
+
+}
+
+#footer ul{
+    padding-left: 0;
+   
+}
+#footer ul li{
+    list-style: none;
+    padding: 5px 0px;
+}
+/* modal */
+.modal-btn:hover{
+    background-color: black !important;
+    color: white!important;
+    transition: 0.5s;
+    
+    }
+    .model-input{
+        outline: none !important;
+        border: none !important;
+        border-bottom: 1px solid gray !important;
+         
+    }
+    .model-input:focus{
+        border-bottom: 1px solid rgb(24, 171, 159) !important;
+        box-shadow: none!important;
+    }
+   
+
+/* service-scroll */
+
+.img-box img{
+  height: 200px;
+ width: 100%;
+ border-radius: 15px 15px 0px 0px;
+ transition: 0.5s;
+}
+.img-box img:hover{
+  transform: scale(1.08);
+  transition: 0.5s;
+  
+}
+.splide__arrow--prev{
+  transform: rotate(180deg);
+  position: relative;
+  left: 10px;
+}
+.splide__arrow--next{
+  position: relative;
+  right: 10px;
+}
+.splide__arrows{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 9rem;
+ 
+  z-index: 10;
+}
+.splide__arrows svg{
+ height:25px;
+}
+.splide__arrow{
+border-radius: 50%;
+background-color: white;
+border: 1px solid black;
+padding: 5px 2px;
+}
+.service-scroller{
+box-shadow: 1px 1px 5px gainsboro;
+border: 1px solid gainsboro;
+border-radius: 20px;
+overflow: hidden;
+}
+.service-scroller p{
+padding-left: 10px;
+padding-top: 10px;
+font-family: sans-serif;
+font-size: 18px;
+color: rgb(100, 84, 84);
+}
+
+/* user-review */
+#user-review .card{
+    background-color: black!important;
+}
+
+.prev{
+    position: relative;
+    bottom: 6rem;
+    z-index: 10;
+}
+.next{
+    position: relative;
+    bottom: 8rem;
+    left: 98%;
+    z-index: 10;
+}
+
+/* media query */
+@media (max-width:564px) {
+    #background-banner{
+/*          height: 100vh!important; */
+    }
+  .service-box a{
+    font-size: 14px!important;
+  }
+    .service-box{
+        border: 1px solid gainsboro;
+      
+    }
+  
+  .service-image img{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+  .service-image{
+    box-shadow: 1px 1px 10px gray!important;
+  }
+  .heading{
+    font-size:40px!important;
+    padding: 0 35px!important;
+  }
+#gromming{
+  margin-top: 40px!important;
+}
+.selectoption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(27, 25, 25)!important;
+    color: white!important;
+}
+
+  .prev{
+    display: none!important;
+  }
+   .next{
+    display: none!important;
+  }
+   .modal-dialog{
+        width: 90%!important;
+        margin: auto!important;
+        margin-bottom: 60px!important;
+    }
+
+}
+@media (max-width:764px){
+    .logo-container{
+        border-radius: 15px 15px 0px 0px;
+    }
+    .icon img{
+     width:70px;
+     height: 70px;   
+    }
+.gromming-container{
+  border-radius: 0px 0px 15px 15px !important;
+}
+  #offer{
+    margin-top: 30px!important;
+  }
+  #big-services{
+    margin-top: 30px!important;
+  }
+}
+
+

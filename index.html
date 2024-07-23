@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HouseStory</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="/hs-image/House Story Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="/owlcarousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="/owlcarousel/css/owl.theme.green.css">
+  <script src="/owlcarousel/js/jquery.min.js"></script>
+  <script src="/owlcarousel/js/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
+</head>
+
+<body>
+  <!-- bottom navbar -->
+  <div id="bottomnav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+
+  <div class="nav">
+    <a href="/index.html" class="nav__link" ><i class="fa-solid fa-home"> </i>Home </a>
+    <a href="/offer.html" class="nav__link"><i class="fa-solid fa-tags"></i>Offer</a>
+    <a href="#" class="nav__link" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="login()"><i class="fa-solid fa-user"></i>Login</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+  <!-- navbar -->
+  <div id="background-banner">
+    <nav class="navbar navbar-expand-lg px-4 d-none d-sm-block  ">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#">
+          <img src="/hs-image/House Story Logo.png" height="50px" class="rounded-3" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item  ">
+              <a class="nav-link  align-items-center " aria-current="page" href="#"><i
+                  class="fa-solid   fa-percent percentage-icon"></i><i
+                  class="fa-solid text-dark fa-2x fa-certificate"></i><span class="fs-4 fw-bold text-dark ">
+                  Offers</span></a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              onclick="login()">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-sm-5">
+      <div class="row pb-5">
+        <div class="col-12 order-2 order-sm-1 py-5 pb-sm-0">
+          <h1 class="text-center heading">simplify the lifestyle</h1>
+        </div>
+        <div class="col-12 order-1 order-sm-2">
+          <div class="row offset-md-2  pb-5">
+            <div class="col-lg-2 col-sm-4  col-md-3 p-0 p-sm-1">
+              <select
+                class=" d-sm-block d-none form-select selectoption form-select-lg mb-md-3 rounded-0 rounded-sm-2  ">
+                <option selected value="1" class="d-sm-block ">Indore</option>
+                <option value="2" class="d-sm-block ">Bhopal</option>
+                <option value="3" class="d-sm-block">Dewas</option>
+              </select>
+              <div class="indore d-sm-none bg-dark text-white   mb-0" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <p class="p-2 px-3 fs-5 mb-0"><i class="fa-solid fa-location-dot me-2"></i>Indore</p>
+
+
+                <div class="offcanvas offcanvas-bottom d-sm-none d-block border-top-0 position-absolute top-0"
+                  data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                  aria-labelledby="offcanvasScrollingLabel">
+                  <div class="offcanvas-header text-dark">
+                    <h5 class="offcanvas-title" d="offcanvasScrollingLabel"><i
+                        class="fa-solid me-2 fa-location-dot"></i>Select Your City</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body text-dark ">
+                    <p> Indore</p>
+                    <p>Dewas</p>
+                    <p>Bhopal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-8 col-sm-8  p-0 p-sm-1 ">
+        <input type="text" class="form-control rounded-0 rounded-sm-3 form-control-lg search" placeholder="Search for 999+ Services" id="search" >
+        <ul class="list-group list" >
+          <li class="list-group-item   border-0  fw-bold"> All Category</li>
+          <li class="list-group-item  border-0" ><a href="/hs-plumber.html" class="text-decoration-none text-dark"> plumber</a></li>
+          <li class="list-group-item  border-0" ><a href="/hs-plumber.html" class="text-decoration-none text-dark">carpenter</a> </li>
+          <li class="list-group-item  border-0" ><a href="/hs-plumber.html" class="text-decoration-none text-dark"> Electrician</a></li>
+          <li class="list-group-item  border-0" ><a href="/hs-plumber.html" class="text-decoration-none text-dark"> floorwork </a></li>
+        </ul>
+     </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col order-2 order-md-1 p-0">
+        <!-- 12 service box -->
+        
+      </div>
+      <div class="col order-1 order-md-2">
+        <!-- service-scroll -->
+        <div id="scroll">
+          <div class="container-fluid">
+            <div class="row pt-md-5 pt-4">
+              <div class="col">
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <div class="img-box">
+                          <div class="service-scroller"> <img src="/hs-image/Domestic Solution.jpg" alt="">
+                            <p>Domestic Services</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="img-box">
+                          <div class="service-scroller"> <img src="/hs-image/Cleaning Service.jpg" alt="">
+                            <p>Cleaning Service</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="img-box">
+                          <div class="service-scroller"> <img src="/hs-image/modular kitchen.jpg" alt="">
+                            <p>Modular Kitchen</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="img-box">
+                          <div class="service-scroller">
+                            <img src="/hs-image/Charted Accounted Service.jpg" alt="">
+                            <p>Charted Accountant</p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="splide__slide">
+                        <div class="service-scroller">
+                          <div class="img-box">
+                            <img src="/hs-image/Personal Service.jpg" alt="">
+                            <p>Personal Service</p>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="img-box">
+                          <div class="service-scroller">
+                            <img src="/hs-image/Home Appliances.jpg" alt="">
+                            <p>Home Appliances Repair</p>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- gromming -->
+      </div>
+    </div>
+  </div>
+  <div id="gromming">
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-md-6 logo-container">
+          <img src="/hs-image/House Story Logo.png" class="img-fluid" alt="">
+          <p>houseStory</p>
+        </div>
+        <div class="col-md-6 bg-white gromming-container p-4">
+          <div class="row">
+            <div class="col-12 pb-3">
+              <h2>Wake up to Bright Sunshine Services</h2>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-6">
+                  <button type="button" class="btn btn-color  fs-5 womengromming" onclick="womengromming()"> women
+                    gromming</button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-color fs-5 mengromming" onclick="mengromming()"> men
+                    gromming</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row row-cols-3 row-cols-sm-4 row-cols-lg-4 row-cols-md-3 text-center   p-3 rounded-4"
+                id="serviceboxwomen">
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image//female hair cut.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Haircut</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/grooming 16.jpeg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Waxing</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/blow dry (1).jpeg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">hairspa</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/grooming 18.jpeg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Facial</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/grooming 6.jpeg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">D-Tan</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/grooming 18 (1).jpeg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Makeup</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/blow dry (1).jpeg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Hairwash</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <button type="button" class="btn btn-dark">More</button>
+                </div>
+
+
+
+              </div>
+              <div class="row row-cols-3 row-cols-sm-4 row-cols-lg-4 row-cols-md-3 text-center   p-3 rounded-4"
+                id="serviceboxmen" style="display: none;">
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men1.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Face Acne</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men2.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Shaving</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men3.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Cleanup</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men4.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">HairSpa</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men6.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">HairWash</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men7.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Haircut</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <img src="/hs-image/men5.jpg" class="rounded-circle" data-aos="zoom-in" alt="">
+                  <a class="fs-6 " href="">Facial</a>
+                </div>
+                <div class="col d-flex flex-column service-box2">
+                  <button type="button" class="btn btn-dark">More</button>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- offer -->
+  <div id="offer">
+    <div class="container-fluid px-4">
+      <div class="row">
+        <div class="col-12 pb-4">
+          <h1 class="text-center fs-2 mb-3">OFFER YOU DESERVE</h1>
+          <hr style="background-color: black; height: 5px; width: 15%; margin:auto;opacity: 1; border-radius: 10px;">
+          <p class="text-dark lead text-center fw-semibold mt-4">big house needs big offers | become a HStory Celebs &
+            get offer every day</p>
+        </div>
+        <div class="col-12">
+          <section id="offer-scroll">
+            <div class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="card rounded-3">
+                  <img src="hs-image/7-e1610627711334.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text fw-semibold">Get Next Service Free</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card rounded-3">
+                  <img src="hs-image/9-e1610627676220.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text fw-semibold">Get Free Movie Tickets</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card rounded-3">
+                  <img src="hs-image/7-e1610627711334.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text fw-semibold">Get Next Service Free</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card rounded-3">
+                  <img src="hs-image/9-e1610627676220.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text fw-semibold">Get Free Movie Tickets</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- big-services -->
+  <div id="big-services">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card big-service-box text-center">
+            <img src="/hs-image/realstate.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">
+              <h4>Home Construction</h4>
+              <p class="lead fs-6 text-secondary fw-semibold">Hstory can beat any competitor with in 10-15%</p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card big-service-box text-center">
+            <img src="/hs-image/home-constraction.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+              <h4>Home Construction</h4>
+              <p class="lead fs-6 text-secondary fw-semibold">Hstory can beat any competitor with in 10-15%</p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card big-service-box text-center">
+            <img src="/hs-image/living-room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+              <h4>Home Construction</h4>
+              <p class="lead fs-6 text-secondary fw-semibold">Hstory can beat any competitor with in 10-15%</p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- user-review -->
+  <div id="user-review">
+    <div class="container-fluid mt-3 mt-md-5">
+      <div class="row">
+        <div class="col-12 pb-4">
+          <h1 class="text-center fs-2 mb-3">CUSTOMER REVIEW</h1>
+          <hr style="background-color: black; height: 5px; width: 15%; margin:auto;opacity: 1; border-radius: 10px;">
+          <p class="text-dark lead text-center fw-semibold mt-4">What we expecting from you, after join HStory family
+          </p>
+        </div>
+        <div class="col-12 ">
+          <section id="review-user">
+            <div class=" owl-carousel owl-theme">
+              <div class="item">
+                <div class="card">
+                  <div class="card-header ">
+                    <i class="fa-solid  fa-quote-left text-white fs-5"></i>
+                  </div>
+                  <div class="card-body pt-0">
+                    <blockquote class="blockquote mb-0">
+                      <p class="text-white fs-6">Really nice work by House Story, my gate g geyser done by harish bhaiya
+                        &amp; mr. Shadan.</p>
+                      <footer class="text-white">User</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-header ">
+                    <i class="fa-solid  fa-quote-left text-white fs-5"></i>
+                  </div>
+                  <div class="card-body pt-0">
+                    <blockquote class="blockquote mb-0">
+                      <p class="text-white fs-6">Really nice work by House Story, my gate g geyser done by harish bhaiya
+                        &amp; mr. Shadan.</p>
+                      <footer class="text-white">Adarsh</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-header ">
+                    <i class="fa-solid  fa-quote-left text-white fs-5"></i>
+                  </div>
+                  <div class="card-body pt-0">
+                    <blockquote class="blockquote mb-0">
+                      <p class="text-white fs-6">Really nice work by House Story, my gate g geyser done by harish bhaiya
+                        &amp; mr. Shadan.</p>
+                      <footer class="text-white">Aman</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card">
+                  <div class="card-header ">
+                    <i class="fa-solid  fa-quote-left text-white fs-5"></i>
+                  </div>
+                  <div class="card-body pt-0">
+                    <blockquote class="blockquote mb-0">
+                      <p class="text-white fs-6">Really nice work by House Story, my gate g geyser done by harish bhaiya
+                        &amp; mr. Shadan.</p>
+                      <footer class="text-white">vivek</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <div class="owl-nav">
+            <div class="customPrevBtn prev"><i class="fa-solid fa-circle-chevron-left fs-4 text-white"></i></div>
+            <div class="customNextBtn next"><i class="fa-solid fa-circle-chevron-right fs-4 text-white"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mobile app -->
+  <div id="mobile">
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-md-8 d-flex align-items-center justify-content-center flex-column">
+
+          <h1 class="fs-2 fw-bold text-center text-md-start">Share your experience & become HStory Celeb</h1>
+          <p class=" text-dark  fs-4 text-center">Share your experience on your social media account and tag us, & get a
+            free HStory Celeb subscription </p>
+
+          <div class="icon pt-4">
+            <img src="/images/facebook-icon.png" alt="">
+            <img src="/images/instagram-icon.png" alt="">
+            <img src="/images/linkedin-icon.png" alt="">
+            <img src="/images/whatsapp-icon.png" alt="">
+          </div>
+        </div>
+
+        <div class="col-md-4 text-md-end text-center mt-4 mt-sm-0">
+          <img src="/hs-image/mobile-app.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- experience -->
+  <div id="experience">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-sm-3 mb-3 mb-sm-0 text-center border-end border-dark">
+          <h1>999+</h1>
+          <p class="lead fw-semibold">Services</p>
+        </div>
+        <div class="col-6 col-sm-3 mb-3 mb-sm-0 text-center border-end border-dark">
+          <h1>20K+</h1>
+          <p class="lead fw-semibold">Customer Served</p>
+        </div>
+        <div class="col-6 col-sm-3 text-center border-end border-dark">
+          <h1>100+</h1>
+          <p class="lead fw-semibold">Vendors</p>
+        </div>
+        <div class="col-6 col-sm-3 text-center ">
+          <h1>14+</h1>
+          <p class="lead fw-semibold">experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact info -->
+  <div id="footer">
+    <div class="container-fluid">
+      <div class="row pt-5 gy-4">
+        <div class="col-md-3 col-6">
+          <h4> HStory Support</h4>
+          <hr style="background-color: white; height: 3px; width: 15%; ;opacity: 1;">
+          <ul>
+            <li><i class="fa-solid fa-comments  me-2"></i>talk to us</li>
+            <li><i class="fa-solid fa-envelope-open-text me-2"></i> drop a query</li>
+            <li><i class="fa-solid fa-envelope me-2"></i>hs@housestory.in</li>
+            <li> <i class="fa-solid fa-location-dot me-2"></i> 306, Business Skyline, Indore</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4> HStory Articles </h4>
+          <hr style="background-color: white; height: 3px; width: 15%; ;opacity: 1;">
+          <ul>
+            <li>Legal Policy</li>
+            <li> Privacy Policy</li>
+            <li>User Agreement</li>
+            <li>Partner Agreement</li>
+            <li>Report Infringement</li>
+            <li>Vendor Agreement</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4> Site Map</h4>
+          <hr style="background-color: white; height: 3px; width: 15%; ;opacity: 1;">
+          <ul>
+            <li>Your Career</li>
+            <li>Hstory FAQ</li>
+            <li>About Hstory</li>
+            <li>Hstory Process</li>
+            <li>Track Order</li>
+            <li>Vendor Registration</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4>Future Site</h4>
+          <hr style="background-color: white; height: 3px; width: 15%; ;opacity: 1;">
+          <ul>
+            <li>Pune</li>
+            <li>Delhi</li>
+            <li>Raipur</li>
+            <li>Bangalore</li>
+            <li>Hyderabad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="fs-5 text-center text-md-start">
+            All rights reserved © 2018 - 2023. HouseStory Technology India Pvt. Ltd.
+            CIN(U74999MP2021PTC057946)
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end text-center px-5">
+          <div class="">
+            <i class="fa-brands fa-twitter me-2 text-dark bg-white rounded-circle p-2"></i>
+            <i class="fa-brands fa-facebook me-2 text-dark  bg-white rounded-circle p-2"></i>
+            <i class="fa-brands fa-instagram me-2 text-dark  bg-white rounded-circle p-2"></i>
+            <i class="fa-brands fa-whatsapp text-dark  bg-white rounded-circle p-2"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 ">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 d-flex " id="exampleModalLabel">
+            <button type="button" id="email" class="btn text-info me-3 modal-btn model-title-text" onclick="email()">Login with
+              Email</button>
+            <button type="button" class="btn text-info modal-btn model-title-text " onclick="otp()">Login with OTP</button>
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body " id="content">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-0 model-input" id="floatingInput"
+              placeholder="name@example.com">
+            <label for="floatingInput">Email address*</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control rounded-0  model-input" id="floatingPassword"
+              placeholder="Password">
+            <label for="floatingPassword">Password*</label>
+          </div>
+        </div>
+        <div class="modal-body pb-0" id="content3">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-0  model-input" id="floatingInput"
+              placeholder="Enter The Mobile No.">
+            <label for="floatingInput">Enter The 10 Digit Number*</label>
+          </div>
+        </div>
+
+        <div class="modal-footer pt-0 justify-content-start align-items-start border-0 d-flex flex-column">
+          <div id="content2">
+            <div>
+              <button type="button" class="btn btn-dark"> Login</button>
+              <button type="button" class="btn bg-dark bg-opacity-50 text-white fw-semibold"> Register</button>
+            </div>
+            <div>
+              <a href="" class="text-primary text-decoration-none d-block"> Lost Your Password?</a>
+            </div>
+          </div>
+          <div id="content4">
+            <button type="button" class="btn btn-dark d-block"> Send OTP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ----scriptpart -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

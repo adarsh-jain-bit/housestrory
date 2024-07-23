@@ -1,0 +1,143 @@
+body{
+    overflow: hidden;
+}
+#plumber-container{
+    background-color: black;
+    color: white;
+    
+}
+.coupon{
+border: 1px dashed white;
+position: relative;
+}
+.couponh4{
+    position: absolute;
+   
+    top: -16px;
+    left: 25px;
+    display: inline;
+    background: black;
+    padding: 0 10px;
+}
+.dropdown-toggle::after{
+    display: none!important;
+}
+
+.dropdown-service{
+    background-color: black!important;
+    color: white!important;
+    border-radius: 5px !important;
+    width: 100%!important;
+}
+.dropdown-menu{
+    width: 100%!important;
+    margin: -3px 0px !important;
+    font-family: sans-serif;
+}
+input{
+    box-shadow: none!important;
+}
+.input-group{
+    z-index: 10!important;
+
+}
+.add-option{
+    position: relative;
+    bottom: 19px;
+    width: 60%;
+    padding: 10px;
+    left: 21px;
+}
+.container-service{
+    height: 600px; 
+    overflow-y: scroll;
+
+}
+.container-service::-webkit-scrollbar {
+    display: none;
+  }
+@media (max-width:1000px) {
+    .plumber-img img{
+        height: 100px;
+    }
+}
+
+/* popup */
+.card{
+  width: 30rem!important;
+}
+.cardwrapper{
+     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+   z-index: 100;
+  animation: box 1s ease;
+  }
+  @keyframes box {
+    0%{
+     opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
+  }
+  .card{
+   display: block;
+   margin:  auto;
+   transform: translateY(100px);
+ 
+  }
+  #closebtn{
+      float: right;
+     box-shadow: none!important;
+  }
+  .image img{
+    border-radius: 10px;
+  }
+  .image p{
+    line-height: 20px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+  }
+  /* .fix-box{
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    top: 15px;
+  }
+  .fix-box::-webkit-scrollbar {
+    display: none;
+  } */
+  .spinnerwrapper{
+    display:flex ;
+    align-items: center;
+    justify-content:center ;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10000!important;
+  }
+  .spinner{
+    display: block;
+   
+  }
+@media (max-width:564px){
+  .card{
+    width: 80%!important;
+  }
+  
+  .image p{
+  line-height: 16px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+}
