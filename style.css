@@ -1,23 +1,13 @@
 html, body {
   height: 100%;
   width: 100%;
-/*   overflow-x: hidden; */
+  overflow-x: hidden;
 }
 /* bottom nav */
-
-.nav{
-   height: 50px; 
-   width: 100vw;
-   position: fixed;
-   bottom: 0;
-   left: 0;
-   background-color: black;
- display: flex!important;
- align-items: center;
- box-shadow: 0 0 10px rgba(109, 99, 99, 0.2);
- z-index: 10000;
- justify-content: space-around;
+.nav {
+    display: none!important;
 }
+
 .nav__link{
     color: #cfbaba;
     text-decoration: none;
@@ -360,6 +350,19 @@ color: rgb(100, 84, 84);
 
 }
 @media (max-width:764px){
+    .nav{
+        height: 50px; 
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+      display: flex!important;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(109, 99, 99, 0.2);
+      z-index: 10000;
+      justify-content: space-around;
+     }
     .logo-container{
         border-radius: 15px 15px 0px 0px;
     }
@@ -376,6 +379,7 @@ color: rgb(100, 84, 84);
   #big-services{
     margin-top: 30px!important;
   }
+
 }
 
 
